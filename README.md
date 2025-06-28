@@ -15,6 +15,20 @@ uv sync
 - You pass in your function definitions as JSON.
 - You ask a natural language question.
 - The model returns a **structured function call** (in text) you can parse and execute.
+
+```
+ % uv run main.py
+Loading checkpoint shards:   ...
+Setting `pad_token_id` to `eos_token_id`:100015 for open-end generation.
+
+You are Gorilla OpenFunctions, answer using function calls only.
+<<function>>[{"name": "get_current_weather", "description": "Get the current weather in a given location", "parameters": {"type": "object", "properties": {"location": {"type": "string", "description": "City, state"}, "unit": {"type": "string", "enum": ["celsius", "fahrenheit"]}}, "required": ["location"]}}]
+
+<<question>>What's the weather like in Boston and San Francisco?
+
+<<function>>get_current_weather(location='Boston')<<function>>get_current_weather(location='San Francisco')
+```
+
 ## **✅ Notes**
 - This example runs the model locally. For a **hosted endpoint**, you can use the Berkeley OpenFunctions API.
 - Works well with quantized models (GGUF) too if you prefer llama.cpp.
