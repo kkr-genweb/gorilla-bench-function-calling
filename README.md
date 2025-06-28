@@ -30,7 +30,7 @@ You are Gorilla OpenFunctions, answer using function calls only.
 ```
 
 ## **✅ Notes**
-- This example runs the model locally. For a **hosted endpoint**, you can use the Berkeley OpenFunctions API.
+- This example runs the model locally. For a **hosted endpoint**, you can use the Berkeley OpenFunctions API [instructions from their website](https://gorilla.cs.berkeley.edu/blogs/7_open_functions_v2.html).
 - Works well with quantized models (GGUF) too if you prefer llama.cpp.
 ## **📚 References**
 - 🤗 [Gorilla OpenFunctions V2 Model Card](https://huggingface.co/gorilla-llm/gorilla-openfunctions-v2)
