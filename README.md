@@ -35,3 +35,19 @@ You are Gorilla OpenFunctions, answer using function calls only.
 ## **📚 References**
 - 🤗 [Gorilla OpenFunctions V2 Model Card](https://huggingface.co/gorilla-llm/gorilla-openfunctions-v2)
 - 📝 [Gorilla Paper](https://arxiv.org/abs/2305.15334)
+
+### Requirements (From talk given by Shishir Patil last year, see below)
+1. API choice: should we use Stripe, or Wells Fargo, or something else
+2. Syntax translation: how to call the API to avoid a stack trace error
+3. Argument extraction: provide the right parameters for the API
+
+### Direction taken by Gorilla (Finetuning)
+- [Fine tune a model for api and function calling](https://youtube.com/clip/UgkxqNG_-w-fO-YHzDl-0589Jx4eR0yPp_Yh?si=2dAaPFUNH--6peVi)
+
+### Direction taken by Others (Prompt-loading, RAG)
+- Prompt loading (include api spec in prompt, doesn't scale)
+- RAG across functions (can scale, and potentially more timely, but may not be as accurate as fine tuning approach)
+
+### Tips
+- APIs are changing frequently, so don't forget that latest version is key and not stale
+- Consider retrieval aware fine tuning as a way to do this -- if you are doing RAG, do RAFT (optimize for particular type of open book exam; double digit percent improvements possible)
